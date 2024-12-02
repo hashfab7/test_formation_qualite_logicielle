@@ -3,6 +3,10 @@ pipeline
 agent any
 stages
 {
+stage('tests')
+{
+parallel
+{
 stage('Test for Ubunto')
 {
 steps
@@ -25,6 +29,8 @@ steps
 {
 echo "Test Extra Os"
 sleep 10
+}
+}
 }
 }
 }
